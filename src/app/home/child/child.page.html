@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="'/home'"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Child Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-list>
+      <!-- Commented on purpose -->
+      <!-- <ion-item>
+        <ion-label class="form-label" position="fixed">Open Modal: </ion-label>
+        <ionic-selectable
+        class="ion-text-end"
+        style="width: 100%; max-width: 100%;"
+        [items]="countries"
+        itemValueField="id"
+        itemTextField="name"
+        closeButtonText="Cancel"
+        searchDebounce="750"
+        searchFailText="There are no results."
+        searchPlaceholder="Search country"
+        [canSearch]="true"
+        [hasInfiniteScroll]="true"
+        placeholder="Select" 
+        formControlName="nationality"
+        (onSearch)="onSearchCountry($event)"
+        (onInfiniteScroll)="onGetMoreCountries($event)"></ionic-selectable>
+      </ion-item> -->
+
+      <!-- Uncommented on purpose.  -->
+      <ion-item>
+        <ion-label class="form-label" position="fixed">Open Modal: </ion-label>
+        <ionic-selectable
+        class="ion-text-end"
+        style="width: 100%; max-width: 100%;"
+        [items]="countries"
+        itemValueField="id"
+        itemTextField="name"
+        closeButtonText="Cancel"
+        searchDebounce="750"
+        searchFailText="There are no results."
+        searchPlaceholder="Search country"
+        [canSearch]="true"
+        placeholder="Select" 
+        formControlName="nationality"
+        (onSearch)="onSearchCountry($event)"></ionic-selectable>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

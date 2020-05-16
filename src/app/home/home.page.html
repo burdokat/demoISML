@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+    <strong>Steps to reproduce the memory leak:</strong>
+    <ol>
+      <li>Open the child page.</li>
+      <li>Open the modal.</li>
+      <li>Type something in the searchbar.</li>
+      <li>Select any item or close the modal.</li>
+      <li>Navigate back to the home page.</li>
+      <li>Repeat x times.</li>
+      <li>Take memory snapshot.</li>
+    </ol>
+    <p>(Go to dev tools and take a memory snapshot and check the ionic selectable modal components piled up)</p>
+    <ion-button
+    color="primary"
+    class="ion-margin"
+    (click)="navigateToChild()">Open Child Page</ion-button>
+  </div>
+</ion-content>
